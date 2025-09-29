@@ -13,7 +13,8 @@ router.post("/register", async (req, res) => {
         const { username, email, password } = req.body;
 
         if (!username || !email || !password) {
-            return res.status(400).json({ message: "All fields are requiredppp" });
+            
+            return res.status(400).json({ message: "All fields are required" });
         }
 
         if (password.length < 6) {
